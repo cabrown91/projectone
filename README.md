@@ -1,4 +1,4 @@
-# projectone
+README
 nonprofit crowdfunding app
 
 <b>Project One</b>
