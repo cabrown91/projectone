@@ -17,6 +17,9 @@ app.use(express.static(__dirname + '/public'));
 // configure bodyParser (for receiving form data)
 app.use(bodyParser.urlencoded({ extended: true }));
 
+// set view engine to hbs (handlebars)
+app.set('view engine', 'hbs');
+
 // middleware for auth
 app.use(cookieParser());
 app.use(session({
@@ -43,8 +46,10 @@ app.use(function(req, res, next) {
   next();
 });
 
-app.get('/', function homepage (req, res) {
-  res.sendFile(__dirname + '/views/index.html');
+// HOMEPAGE ROUTE
+
+app.get('/', function (req, res) {
+  res.render('index');
 });
 
 /*
@@ -61,7 +66,7 @@ app.get('/api', controllers.api.index);
 
 // show signup view
 app.get('/signup', function (req, res) {
-  res.sendFile(__dirname + '/views/signup.html');
+  res.render('signup'); // you can also use res.sendFile
 });
 
 // sign up new user, then log them in
@@ -78,13 +83,13 @@ app.post('/signup', function (req, res) {
 
 // show login view
 app.get('/login', function (req, res) {
-  res.sendFile(__dirname + '/views/login.html');
+  res.render('login');
 });
 
 // log in user
 app.post('/login', passport.authenticate('local'), function (req, res) {
   console.log(req.user);
-  res.redirect('/'); // preferred!
+  res.redirect('/'); 
 });
 
 app.get('/logout', function (req, res) {
