@@ -1,6 +1,6 @@
 function index(req, res) {
   res.json({
-    message: "Welcome to tunely!",
+    message: "Welcome to nonprofit crowdfunding app!",
     documentation_url: "https://github.com/cabrown91/projectone/blob/master/README.md",
     base_url: "http://tunely.herokuapp.com",
     endpoints: [
