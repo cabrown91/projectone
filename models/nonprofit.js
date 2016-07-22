@@ -1,5 +1,6 @@
-var mongoose = require("mongoose");
-var Schema = mongoose.Schema;
+var mongoose = require('mongoose'),
+    Schema = mongoose.Schema,
+    passportLocalMongoose = require('passport-local-mongoose');
 
 var NonprofitSchema = new Schema({
   nonprofit: String,
@@ -9,6 +10,8 @@ var NonprofitSchema = new Schema({
   photo: String,
   donation_description: String,
 });
+
+NonprofitSchema.plugin(passportLocalMongoose);
 
 var Nonprofit = mongoose.model('Nonprofit', NonprofitSchema);
 
