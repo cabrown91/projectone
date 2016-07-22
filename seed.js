@@ -1,6 +1,6 @@
 var db = require("./models");
 
-var albums = [
+var nonprofitList = [
   {
     title: 'Cupid Deluxe',
     artist: 'Blood Orange'

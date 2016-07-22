@@ -13,6 +13,7 @@ The object of this project is to create a platform which allows nonprofits to po
 <ul>JSON</ul>
 <ul>Mongoose/MongoDB</ul>
 <ul>Node.js</ul>
+<ul> Passport.js </ul>
 
 <b> Existing Features </b>
 
