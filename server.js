@@ -58,6 +58,21 @@ app.get('/', function (req, res) {
 
 app.get('/api', controllers.api.index);
 
+app.get('/api/projects', controllers.api.index);
+
+app.post('/api/projects', function (req, res) {
+ // create new post with form data (`req.body`)
+ var newNonprofit = new Nonprofit(req.body);
+
+ // save new post in db
+ newNonprofit.save(function (err, savedNonprofit) {
+   if (err) {
+     res.status(500).json({ error: err.message });
+   } else {
+     res.json(savedNonprofit);
+   }
+ });
+});
 
 
 
@@ -89,7 +104,7 @@ app.get('/login', function (req, res) {
 // log in user
 app.post('/login', passport.authenticate('local'), function (req, res) {
   console.log(req.user);
-  res.redirect('/'); 
+  res.redirect('/');
 });
 
 app.get('/logout', function (req, res) {

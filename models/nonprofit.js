@@ -3,7 +3,7 @@ var mongoose = require('mongoose'),
     passportLocalMongoose = require('passport-local-mongoose');
 
 var NonprofitSchema = new Schema({
-  nonprofit: String,
+  nonprofit_field: String,
   money_needed: Number,
   project_description: String,
   nonprofit_description: String,
