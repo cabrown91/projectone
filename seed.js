@@ -38,7 +38,7 @@ db.Nonprofit.remove({}, function(err, nonprofits){
     db.Nonprofit.create(nonprofit_list, function(err, projects){
       if (err) { return console.log('err', err); }
       console.log("created", projects.length, "projects");
-      process.exit();
+      // process.exit();
     });
   }
 });

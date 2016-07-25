@@ -3,11 +3,11 @@ var express = require('express'),
     app = express(),
     bodyParser = require('body-parser'),
     mongoose = require('mongoose'),
-    controllers = require('./controllers');
+    controllers = require('./controllers'),
 
     //  NEW ADDITIONS
     cookieParser = require('cookie-parser'),
-    session = require('express-session'),
+    session = require('express-session');
     passport = require('passport'),
     LocalStrategy = require('passport-local').Strategy;
 
@@ -58,13 +58,13 @@ app.get('/', function (req, res) {
 
 app.get('/api', controllers.api.index);
 
-app.get('/api/projects', controllers.api.index);
+app.get('/api/projects', controllers.projects.index);
 
 app.post('/api/projects', function (req, res) {
  // create new post with form data (`req.body`)
  var newNonprofit = new Nonprofit(req.body);
-
- // save new post in db
+//
+//  // save new post in db
  newNonprofit.save(function (err, savedNonprofit) {
    if (err) {
      res.status(500).json({ error: err.message });

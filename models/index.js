@@ -1,5 +1,5 @@
 var mongoose = require("mongoose");
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/projectone");
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/projectone_three");
 
 module.exports.Nonprofit = require("./nonprofit.js");
 
