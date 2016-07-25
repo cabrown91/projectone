@@ -1,8 +1,10 @@
-var db = require('../models');
+var db = require('../models'),
+  User = db.User,
+  Nonprofit = db.Nonprofit;
 
 // GET /api/projects
 function index(req, res) {
-  db.Nonprofit.find(function(err, projects) {
+  Nonprofit.find(function(err, projects) {
     if (err) {return console.log("projects error: " + err); }
         res.json(projects);
      });
@@ -10,17 +12,22 @@ function index(req, res) {
 }
 
 
-
-// function create(req, res) {
+function create(req, res) {
+ // create new post with form data (`req.body`)
+ var newNonprofit = new Nonprofit(req.body);
 //
-// }
-
-
-
+//  // save new post in db
+ newNonprofit.save(function (err, savedNonprofit) {
+   if (err) {
+     res.status(500).json({ error: err.message });
+   } else {
+     res.json(savedNonprofit);
+   }
+ });
+}
 
 
 
 
 module.exports.index = index;
-
-// module.exports.create = create;
+module.exports.create = create;

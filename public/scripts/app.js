@@ -1,19 +1,35 @@
+var template;
 $(document).ready(function() {
   console.log('app.js loaded!');
-  $.get('/api/projects').success(function(projects) {
-    projects.forEach(function (projects) {
-    $("#projects-list").append(projects.nonprofit_field);
-    });
 
-    $('#create-project').on('submit', function (event){
-      event.preventDefault();
-      var serializeddata = $(this).serialize();
-      console.log(serializeddata);
-      $.post('/api/projects', serializeddata, function(project) {
-      console.log('project after POST', project);
-      renderProject(project);
-    });
-    $(this).trigger("reset");
+  var baseUrl = '/api/projects';
+
+  var allProjects = [];
+
+  var $projectsList = $('#projects-list');
+
+  var $createProject = $('#create-project');
+
+  // compile handlebars template
+  var source = $('#projects-template').html();
+  template = Handlebars.compile(source);
+
+  var render = function(allProjects) {
+
+    $projectsList.empty();
+
+    var projectsHtml = template({ projects: allProjects });
+
+    $projectsList.append(projectsHtml);
+  };
+
+  $.get(baseUrl, function (data) {
+
+    allProjects = data;
+    console.log(allProjects);
+
+    render(allProjects);
+
   });
-});
+
 });

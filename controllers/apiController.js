@@ -8,6 +8,7 @@ function index(req, res) {
       {method: "POST", path: "/api/signup", description: "Sign up page"},
       {method: "POST", path: "/api/login", description: "Log in page"},
       {method: "GET", path: "/api/logout", description: "Log out page"},
+      {method: "POST", path: "/api/projects", description: "Nonprofit projects created"}
     ]
   });
 }

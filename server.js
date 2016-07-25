@@ -7,7 +7,7 @@ var express = require('express'),
 
     //  NEW ADDITIONS
     cookieParser = require('cookie-parser'),
-    session = require('express-session');
+    session = require('express-session'),
     passport = require('passport'),
     LocalStrategy = require('passport-local').Strategy;
 
@@ -32,7 +32,8 @@ app.use(passport.session());
 
 // require Post and User models
 var db = require("./models"),
-      User = db.User;
+      User = db.User,
+      Nonprofit = db.Nonprofit;
 
 // passport config
 passport.use(new LocalStrategy(User.authenticate()));
@@ -60,19 +61,7 @@ app.get('/api', controllers.api.index);
 
 app.get('/api/projects', controllers.projects.index);
 
-app.post('/api/projects', function (req, res) {
- // create new post with form data (`req.body`)
- var newNonprofit = new Nonprofit(req.body);
-//
-//  // save new post in db
- newNonprofit.save(function (err, savedNonprofit) {
-   if (err) {
-     res.status(500).json({ error: err.message });
-   } else {
-     res.json(savedNonprofit);
-   }
- });
-});
+app.post('/api/projects', controllers.projects.create);
 
 
 
