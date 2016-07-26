@@ -4,7 +4,7 @@
 <b>Project One</b>
 <p>The object of this project is to create a platform which allows nonprofits to post projects and/or events that they need funding for. Individuals are then able to give small, or large, donations to projects similarly to crowdfunding.</p>
 
- <a ref="https://guarded-cliffs-37992.herokuapp.com/">Heroku Link</a>
+[Heroku Link](https://guarded-cliffs-37992.herokuapp.com/)
 
 <h2> Technologies Used </h2>
 <ul>HTML/CSS</ul>
