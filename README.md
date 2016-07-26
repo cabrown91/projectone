@@ -1,8 +1,8 @@
 <h1>README</h1>
-nonprofit crowdfunding app
+<h2>Nonprofit Crowdfunding App</h2>
 
 <b>Project One</b>
-The object of this project is to create a platform which allows nonprofits to post projects and/or events that they need funding for. Individuals are then able to give small, or large, donations to projects similarly to crowdfunding.
+<p>The object of this project is to create a platform which allows nonprofits to post projects and/or events that they need funding for. Individuals are then able to give small, or large, donations to projects similarly to crowdfunding.</p>
 
 <b> Technologies Used </b>
 <ul>HTML/CSS</ul>
