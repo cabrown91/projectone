@@ -15,7 +15,7 @@ function index(req, res) {
 function create(req, res) {
  // create new post with form data (`req.body`)
  var newNonprofit = new Nonprofit(req.body);
-console.log(newNonprofit);
+
 //  // save new post in db
  newNonprofit.save(function (err, savedNonprofit) {
    if (err) {
