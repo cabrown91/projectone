@@ -32,4 +32,26 @@ $(document).ready(function() {
 
   });
 
+  $createProject.on('submit', function (event) {
+  event.preventDefault();
+
+  // serialze form data
+  var newproject = $(this).serialize();
+  console.log(newproject);
+  // POST request to create new post
+  $.post(baseUrl, newproject, function (data) {
+    console.log(data);
+
+    // add new post to `allPosts`
+    allProjects.push(data);
+
+    // render all posts to view
+    render(allProjects);
+  });
+
+  // reset the form
+  $createProject[0].reset();
+  $createProject.find('input').first().focus();
+});
+
 });
