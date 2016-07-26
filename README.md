@@ -1,4 +1,4 @@
-README
+<h1>README</h1>
 nonprofit crowdfunding app
 
 <b>Project One</b>
@@ -16,7 +16,7 @@ The object of this project is to create a platform which allows nonprofits to po
 <ul>Passport.js</ul>
 
 <b> Existing Features </b>
-<ul>Create a project as a nonprofit<ul>
+<ul>Create a project as a nonprofit</ul>
 <ul>Donate to a project</ul>
 <ul>Sign Up (auth)</ul>
 <ul>Log In (auth)</ul>
