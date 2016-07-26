@@ -31,3 +31,7 @@ The object of this project is to create a platform which allows nonprofits to po
 <ul>Grab the unique ID for each nonprofit(data-id class is already set)</ul>
 <ul>Associate donations to the unique project ID </ul>
 <ul>Connect to join table in DB</ul>
+
+![screen shot 2016-07-26 at 7 16 14 am](https://cloud.githubusercontent.com/assets/19937807/17141442/e97987ac-5300-11e6-878d-f6b93f9929a9.png)
+![screen shot 2016-07-26 at 7 18 39 am](https://cloud.githubusercontent.com/assets/19937807/17141554/40704d5c-5301-11e6-9ff7-7aad583b0247.png)
+![screen shot 2016-07-26 at 7 17 56 am](https://cloud.githubusercontent.com/assets/19937807/17141553/406fde6c-5301-11e6-83f7-e5b2f3371133.png)
