@@ -66,28 +66,31 @@
               \{{#each projects}}
               <div class="col-md-9 col-xs-12">
                 <ul class="list-group">
-                  <h4 class='inline-header'>Photo:</h4>
-                  <img class='img-responsive' src=\{{photo}}>
+                  <li class="list-group-item">
+                    <h4 class='inline-header'>Photo:</h4>
+                    <img class='img-responsive' src=\{{photo}}>
 
-                  <h4 class='inline-header'>Nonprofit:</h4>
-                  <span class='nonprofit'>\{{nonprofit}}</span>
+                    <h4 class='inline-header'>Nonprofit:</h4>
+                    <span class='nonprofit'>\{{nonprofit}}</span>
 
-                  <h4 class='inline-header'>Money Needed:</h4>
-                  <span class='money-needed'>\{{money_needed}}</span>
+                    <h4 class='inline-header'>Money Needed:</h4>
+                    <span class='money-needed'>\{{money_needed}}</span>
 
-                  <h4 class='inline-header'>Project Description:</h4>
-                  <span class='project-description'>\{{project_description}}</span>
+                    <h4 class='inline-header'>Project Description:</h4>
+                    <span class='project-description'>\{{project_description}}</span>
 
-                  <h4 class='inline-header'>Nonprofit Description:</h4>
-                  <span class='donation-description'>\{{nonprofit_description}}</span>
+                    <h4 class='inline-header'>Nonprofit Description:</h4>
+                    <span class='donation-description'>\{{nonprofit_description}}</span>
 
-                  <h4 class='inline-header'>Donation Description:</h4>
-                  <span class='donation-description'>\{{donation_description}}</span>
+                    <h4 class='inline-header'>Donation Description:</h4>
+                    <span class='donation-description'>\{{donation_description}}</span>
+                  <div class='panel-footer'>
+                    <button class='btn btn-primary donate'>Make a Donation</button>
+                  </div>
+                  </li>
                 </ul>
               </div>
-              <div class='panel-footer'>
-                <button class='btn btn-primary donate'>Make a Donation</button>
-              </div>
+
               \{{/each}}
 
 
